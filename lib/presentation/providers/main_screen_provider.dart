@@ -84,7 +84,6 @@ class MainScreenProvider extends ChangeNotifier {
 
   void searchFoods(String val) {
     if (val.isEmpty && selectedCategoryList.isEmpty && selectedCuisineList.isEmpty) {
-      print('Empty Search in All Food');
       foodList.clear();
       foodList.addAll(foodListToSearch);
       notifyListeners();
@@ -93,14 +92,12 @@ class MainScreenProvider extends ChangeNotifier {
 
 
     else if (val.isEmpty && (selectedCategoryList.isNotEmpty || selectedCuisineList.isNotEmpty)) {
-      print('Empty Search in Filter Food');
       applyFilters();
       return;
     }
 
 
     else if (val.isNotEmpty && (selectedCategoryList.isNotEmpty || selectedCuisineList.isNotEmpty)) {
-      print('Search in Filter Food');
       List <Food> filteredFood = foodList.where((element) => element.name.toLowerCase().contains(val.toLowerCase().trim())).toList();
       foodList.clear();
       foodList.addAll(filteredFood);
@@ -109,7 +106,7 @@ class MainScreenProvider extends ChangeNotifier {
       return;
     }
 
-    print('Search in All Food');
+
     foodList.clear();
     foodList.addAll(foodListToSearch.where((element) => element.name.toLowerCase().contains(val.toLowerCase().trim())).toList());
     notifyListeners();
