@@ -1,6 +1,9 @@
 # receipe_task
 
-A new Flutter project.
+A Flutter project that is made with the concept of clean architecture, MVVM pattern and test driven development.
+It includes unit tests of providers, repository and data sources. 
+It also includes widget tests of screens.
+
 
 ## Getting Started
 
