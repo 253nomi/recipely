@@ -8,8 +8,7 @@ import 'package:receipe_task/domain/usecases/get_cuisine_list.dart';
 import 'package:receipe_task/domain/usecases/get_food_list.dart';
 import 'package:receipe_task/presentation/providers/main_screen_provider.dart';
 import 'package:receipe_task/presentation/widgets/filter_bottom_sheet.dart';
-
-import '../../mock_contants/mock_constants.dart';
+import '../../mock_constants/mock_constants.dart';
 import '../../mocks/mock_repository.dart';
 import '../helpers/extensions.dart';
 

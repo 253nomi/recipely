@@ -3,7 +3,7 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:internet_connection_checker/internet_connection_checker.dart';
 import 'package:mockito/mockito.dart';
 import 'package:receipe_task/utils/network_info.dart';
-import '../mock_contants/mock_constants.dart';
+import '../mock_constants/mock_constants.dart';
 import '../mocks/mock_network_info.dart';
 
 void main() {

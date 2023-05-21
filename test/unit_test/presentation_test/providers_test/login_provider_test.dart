@@ -3,8 +3,7 @@ import 'package:receipe_task/domain/repository/repository.dart';
 import 'package:receipe_task/domain/usecases/login_with_firebase_usecase.dart';
 import 'package:receipe_task/presentation/providers/login_provider.dart';
 import 'package:receipe_task/utils/constants/constants.dart';
-
-import '../../../mock_contants/mock_constants.dart';
+import '../../../mock_constants/mock_constants.dart';
 import '../../../mocks/mock_error_repository.dart';
 import '../../../mocks/mock_repository.dart';
 

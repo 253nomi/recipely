@@ -6,8 +6,7 @@ import 'package:receipe_task/domain/entities/cuisine.dart';
 import 'package:receipe_task/domain/entities/food.dart';
 import 'package:receipe_task/domain/entities/login_with_firebase_params.dart';
 import 'package:receipe_task/domain/repository/repository.dart';
-
-import '../mock_contants/mock_constants.dart';
+import '../mock_constants/mock_constants.dart';
 import 'mock_user.dart';
 
 class MockRepository implements Repository {
