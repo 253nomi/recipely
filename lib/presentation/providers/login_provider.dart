@@ -34,7 +34,7 @@ class LoginProvider extends ChangeNotifier {
     return true;
   }
 
-  validateEmailField(String? val) {
+  void validateEmailField(String? val) {
     if (val == null || val.isEmpty) {
       emailErrorText = null;
       notifyListeners();
@@ -47,7 +47,7 @@ class LoginProvider extends ChangeNotifier {
     }
   }
 
-  validatePasswordField(String? val) {
+  void validatePasswordField(String? val) {
     if (val == null || val.isEmpty) {
       passErrorText = null;
       notifyListeners();

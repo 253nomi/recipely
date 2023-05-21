@@ -19,12 +19,12 @@ class AuthDataSourceImp implements AuthDataSource {
   @override
   Future<User> loginWithFirebase(LoginWithFirebaseParams params) async {
     try {
-      UserCredential userCredential = await firebaseAuth.signInWithEmailAndPassword(
+      var userCredential = await firebaseAuth.signInWithEmailAndPassword(
         email: params.email,
         password: params.password,
       );
 
-      User? user = userCredential.user;
+      var user = userCredential.user;
 
       if (user == null) {
         throw const ServerFailure(SOMETHING_WENT_WRONG);

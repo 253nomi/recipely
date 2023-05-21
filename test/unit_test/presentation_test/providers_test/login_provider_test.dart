@@ -53,7 +53,7 @@ void main() {
     loginProvider = LoginProvider(loginWithFirebaseUseCase: usecase);
 
     // Act
-     await loginProvider.validateEmailField('nomanijaz253@gmail.com');
+    loginProvider.validateEmailField('nomanijaz253@gmail.com');
 
     // assert
     expect(loginProvider.emailErrorText, null);
@@ -66,7 +66,7 @@ void main() {
     loginProvider = LoginProvider(loginWithFirebaseUseCase: usecase);
 
     // Act
-     await loginProvider.validateEmailField('nomanijaz253gmail.om');
+     loginProvider.validateEmailField('nomanijaz253gmail.om');
 
     // assert
     expect(loginProvider.emailErrorText, 'Invalid Email');
@@ -79,7 +79,7 @@ void main() {
     loginProvider = LoginProvider(loginWithFirebaseUseCase: usecase);
 
     // Act
-    await loginProvider.validatePasswordField('12345678');
+    loginProvider.validatePasswordField('12345678');
 
     // assert
     expect(loginProvider.passErrorText, null);
@@ -92,7 +92,7 @@ void main() {
     loginProvider = LoginProvider(loginWithFirebaseUseCase: usecase);
 
     // Act
-    await loginProvider.validatePasswordField('12345');
+    loginProvider.validatePasswordField('12345');
 
     // assert
     expect(loginProvider.passErrorText, 'Password should be 8 characters');
