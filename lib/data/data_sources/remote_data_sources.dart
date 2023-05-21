@@ -31,10 +31,10 @@ class RemoteDataSourceImp implements RemoteDataSource {
       List<Food> foodList = [];
       QuerySnapshot snapshot = await FirebaseFirestore.instance.collection('foods').get();
 
-      snapshot.docs.forEach((DocumentSnapshot document) {
+      for(var document in snapshot.docs){
         final food = Food.fromJson(document);
         foodList.add(food);
-      });
+      }
 
       return foodList;
     } catch (e) {
@@ -48,10 +48,11 @@ class RemoteDataSourceImp implements RemoteDataSource {
       List<Category> catagoryList = [];
       QuerySnapshot snapshot = await FirebaseFirestore.instance.collection('catagories').get();
 
-      snapshot.docs.forEach((DocumentSnapshot document) {
+
+      for(var document in snapshot.docs){
         final catagory = Category.fromJson(document);
         catagoryList.add(catagory);
-      });
+      }
 
       return catagoryList;
     } catch (e) {
@@ -65,10 +66,10 @@ class RemoteDataSourceImp implements RemoteDataSource {
       List<Cuisine> cuisineList = [];
       QuerySnapshot snapshot = await FirebaseFirestore.instance.collection('cuisines').get();
 
-      snapshot.docs.forEach((DocumentSnapshot document) {
+      for(var document in snapshot.docs){
         final cuisine = Cuisine.fromJson(document);
         cuisineList.add(cuisine);
-      });
+      }
 
       return cuisineList;
     } catch (e) {
