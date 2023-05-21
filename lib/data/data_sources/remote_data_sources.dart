@@ -28,7 +28,7 @@ class RemoteDataSourceImp implements RemoteDataSource {
   @override
   Future<List<Food>> fetchFoodList() async {
     try {
-      List<Food> foodList = [];
+      var foodList = <Food>[];
       QuerySnapshot snapshot = await FirebaseFirestore.instance.collection('foods').get();
 
       for(var document in snapshot.docs){
@@ -45,7 +45,7 @@ class RemoteDataSourceImp implements RemoteDataSource {
   @override
   Future<List<Category>> getCategoryList() async {
     try {
-      List<Category> catagoryList = [];
+      var catagoryList = <Category>[];
       QuerySnapshot snapshot = await FirebaseFirestore.instance.collection('catagories').get();
 
 
@@ -63,7 +63,7 @@ class RemoteDataSourceImp implements RemoteDataSource {
   @override
   Future<List<Cuisine>> getCuisineList() async {
     try {
-      List<Cuisine> cuisineList = [];
+      var cuisineList = <Cuisine>[];
       QuerySnapshot snapshot = await FirebaseFirestore.instance.collection('cuisines').get();
 
       for(var document in snapshot.docs){

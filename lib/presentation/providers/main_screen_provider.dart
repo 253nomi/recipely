@@ -98,7 +98,7 @@ class MainScreenProvider extends ChangeNotifier {
 
 
     else if (val.isNotEmpty && (selectedCategoryList.isNotEmpty || selectedCuisineList.isNotEmpty)) {
-      List <Food> filteredFood = foodList.where((element) => element.name.toLowerCase().contains(val.toLowerCase().trim())).toList();
+      var filteredFood = foodList.where((element) => element.name.toLowerCase().contains(val.toLowerCase().trim())).toList();
       foodList.clear();
       foodList.addAll(filteredFood);
       foodList.toSet().toList();
@@ -153,11 +153,11 @@ class MainScreenProvider extends ChangeNotifier {
 
     foodList.clear();
 
-    for (int i = 0; i < selectedCuisineList.length; i++) {
+    for (var i = 0; i < selectedCuisineList.length; i++) {
       foodList.addAll(foodListToSearch.where((element) => element.cuisineId == selectedCuisineList[i].id).toList());
     }
 
-    for (int i = 0; i < selectedCategoryList.length; i++) {
+    for (var i = 0; i < selectedCategoryList.length; i++) {
       foodList.addAll(foodListToSearch.where((element) => element.categoryId == selectedCategoryList[i].id).toList());
     }
 
