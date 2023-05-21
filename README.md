@@ -23,4 +23,4 @@ After cloning move to the installation folder and run
 flutter clean
 flutter pub get
 ```
-Code setup is compleded at this stage.
+Code setup is completed at this stage.
