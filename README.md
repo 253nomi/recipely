@@ -17,3 +17,10 @@ After setting up the environment clone this project to your desired location.
 ```bash
 git clone git@github.com:253nomi/recipely.git
 ```
+
+After cloning move to the installation folder and run
+```bash
+flutter clean
+flutter pub get
+```
+Code setup is compleded at this stage.
