@@ -3,6 +3,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:receipe_task/utils/colors/app_colors.dart';
 
 class CustomTextField extends StatefulWidget {
+  final double labelTextFontSize;
   final TextEditingController controller;
   final bool? obscureText;
   final String? errorText;
@@ -13,7 +14,7 @@ class CustomTextField extends StatefulWidget {
   final Icon prefixIcon;
 
   const CustomTextField(
-      {Key? key, required this.labelText, required this.prefixIcon, this.suffixIcon, required this.onChanged, this.validator, this.obscureText, required this.controller, this.errorText})
+      {Key? key, required this.labelText, required this.prefixIcon, this.suffixIcon, required this.onChanged, this.validator, this.obscureText, required this.controller, this.errorText, required this.labelTextFontSize})
       : super(key: key);
 
   @override
@@ -31,7 +32,7 @@ class _CustomTextFieldState extends State<CustomTextField> {
           suffixIcon: widget.suffixIcon,
           labelText: widget.labelText,
           contentPadding: EdgeInsets.only(bottom: 4.h),
-          labelStyle: TextStyle(color: AppColors.lightGreyColor, fontSize: 14.sp),
+          labelStyle: TextStyle(color: AppColors.lightGreyColor,  fontSize: widget.labelTextFontSize),
           errorBorder: OutlineInputBorder(borderRadius: BorderRadius.circular(20.r), borderSide: BorderSide(width: 0.5, color: Theme.of(context).colorScheme.error)),
           enabledBorder: OutlineInputBorder(borderRadius: BorderRadius.circular(20.r), borderSide: BorderSide(width: 0.5, color: AppColors.lightGreyColor)),
           focusedBorder: OutlineInputBorder(borderRadius: BorderRadius.circular(20.r), borderSide: BorderSide(width: 1.0, color: AppColors.lightGreyColor))),

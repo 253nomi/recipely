@@ -5,8 +5,9 @@ import 'package:receipe_task/utils/colors/app_colors.dart';
 
 class FoodCard extends StatelessWidget {
   final Food food;
+  final double foodCardContainerHeight;
 
-  const FoodCard({Key? key, required this.food}) : super(key: key);
+  const FoodCard({Key? key, required this.food, required this.foodCardContainerHeight}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -16,7 +17,7 @@ class FoodCard extends StatelessWidget {
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10.r)),
         color: Colors.white,
         child: Container(
-          height: MediaQuery.of(context).size.height * 0.12,
+          height: foodCardContainerHeight,
           decoration: BoxDecoration(
             color: Colors.white,
             borderRadius: BorderRadius.circular(10.r),

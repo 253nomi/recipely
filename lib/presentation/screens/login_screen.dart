@@ -64,7 +64,7 @@ class _RecipelyLoginScreenContentState extends State<RecipelyLoginScreenContent>
                 padding: EdgeInsets.only(right: 56.h),
                 child: Text(
                   'Login',
-                  style: TextStyle(color: AppColors.headerTextColor, fontWeight: FontWeight.w500),
+                  style: TextStyle(fontSize: 14.sp, color: AppColors.headerTextColor, fontWeight: FontWeight.w500),
                 ),
               ),
             ),
@@ -125,6 +125,7 @@ class _LoginScreenFirstHalfState extends State<LoginScreenFirstHalf> {
                     height: 80.h,
                     padding: EdgeInsets.symmetric(vertical: 10.h),
                     child: CustomTextField(
+                      labelTextFontSize: 14.sp,
                       key: const ValueKey('email_text_field'),
                       errorText: provider.emailErrorText,
                       controller: emailController,
@@ -167,6 +168,7 @@ class _LoginScreenFirstHalfState extends State<LoginScreenFirstHalf> {
                       height: 80.h,
                       padding: EdgeInsets.symmetric(vertical: 10.h),
                       child: CustomTextField(
+                        labelTextFontSize: 14.sp,
                         key: const ValueKey('password_text_field'),
                         errorText: provider.passErrorText,
                         controller: passwordController,

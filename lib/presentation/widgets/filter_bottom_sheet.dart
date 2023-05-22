@@ -130,7 +130,6 @@ class _BottomSheetContentState extends State<BottomSheetContent> {
             SizedBox(
               height: 20.h,
             ),
-
             CustomButton(
                 text: 'Apply Filter',
                 onPressed: () {

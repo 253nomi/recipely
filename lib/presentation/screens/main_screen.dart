@@ -66,7 +66,7 @@ class _RecipelyMainScreenContentState extends State<RecipelyMainScreenContent> {
               padding: EdgeInsets.only(right: 56.h),
               child: Text(
                 'Search',
-                style: TextStyle(color: AppColors.headerTextColor, fontWeight: FontWeight.w500),
+                style: TextStyle(fontSize: 14.sp, color: AppColors.headerTextColor, fontWeight: FontWeight.w500),
               ),
             ),
           ),
@@ -87,7 +87,8 @@ class _RecipelyMainScreenContentState extends State<RecipelyMainScreenContent> {
                       height: 80.h,
                       padding: EdgeInsets.only(right: 10.w),
                       child: CustomTextField(
-                        key: const ValueKey('search_text_field'),
+                          labelTextFontSize: 14.sp,
+                          key: const ValueKey('search_text_field'),
                           labelText: 'Search',
                           prefixIcon: Icon(
                             Icons.search,
@@ -100,7 +101,7 @@ class _RecipelyMainScreenContentState extends State<RecipelyMainScreenContent> {
                   Expanded(
                       flex: 2,
                       child: GestureDetector(
-                        onTap: ()async{
+                        onTap: () async {
                           final filterBottomSheet = FilterBottomSheet(context: context);
                           await filterBottomSheet.show();
                         },
@@ -127,7 +128,7 @@ class _RecipelyMainScreenContentState extends State<RecipelyMainScreenContent> {
                   child: ListView.builder(
                       itemCount: provider.foodList.length,
                       itemBuilder: (_, __) {
-                        return FoodCard(food: provider.foodList[__]);
+                        return FoodCard(foodCardContainerHeight: MediaQuery.of(context).size.height * 0.12, food: provider.foodList[__]);
                       }),
                 ),
               )
