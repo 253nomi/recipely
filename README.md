@@ -32,3 +32,11 @@ I have attached the demo link below.
 ```bash
 https://drive.google.com/file/d/1OJRQZd-iCGbX_INTMwtVlQ_e8wEQFNjr/view?usp=sharing
 ```
+
+I have attached firebase files link.
+```bash
+https://drive.google.com/file/d/1i8LicniLZHKPwwX34Lx-pE7Du5VbsY1C/view?usp=sharing
+```
+
+Please download GoogleService-Info.plist and place it ios/Runner folder in the project from above link.
+And also download google-service.json and place it in android/app in the project.
