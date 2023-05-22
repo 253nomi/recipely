@@ -40,3 +40,6 @@ https://drive.google.com/file/d/1i8LicniLZHKPwwX34Lx-pE7Du5VbsY1C/view?usp=shari
 
 Please download GoogleService-Info.plist and place it ios/Runner folder in the project from above link.
 And also download google-service.json and place it in android/app in the project.
+
+Have a good day.
+
